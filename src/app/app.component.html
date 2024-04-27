@@ -1,8 +1,11 @@
-<main>
-  <app-header></app-header>
+<main class="flex flex-col h-screen">
+  <section class="flex flex-grow w-full">
+    <app-sidebar></app-sidebar>
 
-  <section class="h-auto p-16 w-full flex-grow">
-    <router-outlet />
+    <section class="w-full flex flex-col flex-grow box-border">
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+    </section>
   </section>
 
   <app-footer></app-footer>
