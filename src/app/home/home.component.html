@@ -1,6 +1,15 @@
-<section class="flex flex-col gap-10">
+<section class="flex flex-col gap-7">
     <h1 class="text-gray-800 text-3xl font-semibold">All Users (12)</h1>
     <main class="flex flex-col gap-10">
         <app-user *ngFor="let user of users" [user] = "user"></app-user>
     </main>
+
+    <mat-paginator [length]="totalRecords"
+        [pageSize]="per_page"
+        [pageSizeOptions]="[6, 12]"
+        (page)="onPageChange($event)"
+        [pageIndex]="page"
+        aria-label="Select page">
+    </mat-paginator>
+
 </section>

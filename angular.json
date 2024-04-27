@@ -26,6 +26,7 @@
               "src/global.css"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css",
               "src/global.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
