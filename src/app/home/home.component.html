@@ -1,1 +1,6 @@
-<p>home works!</p>
+<section class="flex flex-col gap-10">
+    <h1 class="text-gray-800 text-3xl font-semibold">All Users (12)</h1>
+    <main class="flex flex-col gap-10">
+        <app-user *ngFor="let user of users" [user] = "user"></app-user>
+    </main>
+</section>

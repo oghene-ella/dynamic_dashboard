@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',

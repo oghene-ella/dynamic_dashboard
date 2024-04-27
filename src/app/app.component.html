@@ -2,9 +2,11 @@
   <section class="flex flex-grow w-full">
     <app-sidebar></app-sidebar>
 
-    <section class="w-full flex flex-col flex-grow box-border">
+    <section class="w-full flex flex-col flex-grow box-border gap-5">
       <app-header></app-header>
-      <router-outlet></router-outlet>
+      <span class="px-7">
+        <router-outlet></router-outlet>
+      </span>
     </section>
   </section>
 
