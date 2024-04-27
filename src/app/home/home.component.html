@@ -6,9 +6,7 @@
 
     <mat-paginator [length]="totalRecords"
         [pageSize]="per_page"
-        [pageSizeOptions]="[6, 12]"
         (page)="onPageChange($event)"
-        [pageIndex]="page"
         aria-label="Select page">
     </mat-paginator>
 

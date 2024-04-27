@@ -23,16 +23,23 @@ export class HomeComponent {
   totalRecords:number = 0
   per_page: number = 6
   page: number = 1
+  total_page: number = 2
 
-  onPageChange(pageEvent: PageEvent) {
-    this.fetchUsers(pageEvent.pageIndex, pageEvent.pageSize)
-    console.log(this.fetchUsers(pageEvent.pageIndex, pageEvent.pageSize))
+  onPageChange(event: any) {
+    if (this.page == 1 && this.page <= this.total_page) {
+      this.page = this.page + 1
+      this.fetchUsers(this.page, this.per_page)
+    }
+    else if(this.page == this.total_page) {
+      this.page = this.page - 1
+      this.fetchUsers(this.page, this.per_page)
+    }
   }
 
   ngOnInit() {
-    this.fetchUsers(this.page, this.per_page)
-    console.log(this.fetchUsers(this.page, this.per_page))
+    this.fetchUsers(this.page, this.per_page);
   }
+  
 
   fetchUsers(page: number, per_page: number) {
     this.userService.getUsers("https://reqres.in/api/users", {page, per_page})

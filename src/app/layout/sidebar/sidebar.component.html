@@ -1,5 +1,5 @@
-<section class="flex flex-col h-screen ">
-    <aside class="bg-gray-100 text-gray-800 w-full flex flex-col items-center h-screen gap-5" [ngClass]="{'w-fit': isCollapsed, 'w-full': !isCollapsed}">
+<section class="flex flex-col h-screen">
+    <aside class="bg-gray-100 text-gray-800 w-fit flex flex-col items-center h-screen gap-5" [ngClass]="{'w-fit': isCollapsed, 'w-full': !isCollapsed}">
         <div class="w-full px-2 pt-5 flex items-center justify-between">
             <img src="assets/logo.png" alt="Logo" *ngIf="!isCollapsed" class="w-9">
             <button (click)="toggleSidebar()" [ngClass]="{'pl-3': isCollapsed, 'pl-0': !isCollapsed}">
@@ -8,16 +8,16 @@
         </div>
 
         <nav class="flex-1 md:overflow-y-auto w-full">
-          <ul class="md:flex md:flex-col md:space-y-2 gap-3">
-            <li *ngFor="let item of menuItems; let i = index">
-                <a href="#" class="w-full flex items-center gap-3 py-3 px-4"
-                [ngClass]="{'bg-blue-500 border-t-0 border-l-0 border-b-0 border-r-4 border-r-black text-white': i === 0,
-                            'cursor-not-allowed opacity-50': i !== 0}">
-                    <i class="{{ item.icon }}"></i>
-                    <span *ngIf="!isCollapsed">{{ item.name }}</span>
-                 </a>
-            </li>
-          </ul>
+            <ul class="md:flex md:flex-col md:space-y-2 gap-3">
+                <li *ngFor="let item of menuItems; let i = index">
+                    <a href="#" class="w-full flex items-center gap-3 py-3 px-4"
+                    [ngClass]="{'bg-blue-500 border-t-0 border-l-0 border-b-0 border-r-4 border-r-black text-white': i === 0,
+                                'cursor-not-allowed opacity-50': i !== 0}">
+                        <i class="{{ item.icon }}"></i>
+                        <span *ngIf="!isCollapsed">{{ item.name }}</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </aside>
 </section>
