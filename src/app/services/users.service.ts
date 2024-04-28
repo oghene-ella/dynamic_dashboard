@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Pagination, Users } from '../../types';
+import { Pagination, User, Users } from '../../types';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class UsersService {
       responseType: 'json',
     });
   }
-  searchUsers(query: string): Observable<any> {
-    return this.http.get(`https://reqres.in/api/users/search?query=${query}`);
-  }
+  // searchUsers(id: string) {
+  //   return this.http.get<any[]>(`https://reqres.in//api/users/${id}`);
+  // }
 }
