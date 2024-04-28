@@ -25,6 +25,16 @@ export interface User{
     avatar: string;
 }
 
+export interface UserDetails{
+    data: User;
+    support: Support[];
+}
+
+export interface Support{
+    url: string;
+    text: string;
+}
+
 export interface Users {
     data: User[];
     page: number;

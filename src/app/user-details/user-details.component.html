@@ -1,0 +1,10 @@
+<div class="fixed inset-0 flex flex-col gap-8 items-center justify-center z-50" *ngIf="userDetails">
+    <h1 class="text-2xl font-semibold">User Information Card</h1>
+    <div class="bg-white p-6 rounded shadow-lg max-w-md w-full flex flex-col justify-center items-center">
+      <img [src]="userDetails.data.avatar" alt="User avatar" class="mt-4 rounded-full w-24 mx-auto">
+      <h1 class="text-xl font-semibold">{{ userDetails.data.first_name }} {{ userDetails.data.last_name }}</h1>
+      <p class="mt-2">{{ userDetails.data.email }}</p>
+      <button (click)="goBack()" class="w-full mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Back</button>
+    </div>
+  </div>
+  

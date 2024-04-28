@@ -4,6 +4,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import { LoadingService } from './services/loading/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,6 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 })
 export class AppComponent {
   title = 'angular-task';
+
+  constructor(public loadingService: LoadingService) { }
 }
